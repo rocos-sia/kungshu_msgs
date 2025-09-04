@@ -12,7 +12,8 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
-find_package(action_msgs REQUIRED)
+# find_package(action_msgs REQUIRED)
+find_package(builtin_interfaces REQUIRED)
 
 set(msg_files
   "msg/ArmState.msg"
@@ -32,7 +33,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
   ${srv_files}
   ${action_files}
-  DEPENDENCIES std_msgs geometry_msgs sensor_msgs action_msgs
+  DEPENDENCIES 
+  std_msgs geometry_msgs sensor_msgs builtin_interfaces
 )
 
 
