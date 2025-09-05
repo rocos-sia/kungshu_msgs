@@ -17,11 +17,12 @@ find_package(builtin_interfaces REQUIRED)
 
 set(msg_files
   "msg/ArmState.msg"
-  "msg/ArmCommand.msg"
+  "msg/ArmServoCommand.msg"
 )
 
 set(srv_files
-
+  "srv/SetEnable.srv"
+  "srv/SetModeOfOperation.srv"
 )
 
 set(action_files
@@ -33,7 +34,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
   ${srv_files}
   ${action_files}
-  DEPENDENCIES 
+  DEPENDENCIES
   std_msgs geometry_msgs sensor_msgs builtin_interfaces
 )
 
