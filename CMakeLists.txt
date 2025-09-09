@@ -23,6 +23,7 @@ set(msg_files
 set(srv_files
   "srv/SetEnable.srv"
   "srv/SetModeOfOperation.srv"
+  "srv/MoveJ.srv"
 )
 
 set(action_files
